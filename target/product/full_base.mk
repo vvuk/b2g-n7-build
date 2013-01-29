@@ -59,3 +59,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/locales_full.mk)
 
 # Get everything else from the parent package
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_no_telephony.mk)
+
+# B2G
+$(call inherit-product, gonk-misc/b2g.mk)

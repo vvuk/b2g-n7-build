@@ -2072,6 +2072,9 @@ endef
 # when requested.
 include $(BUILD_SYSTEM)/distdir.mk
 
+# allow for disabling some modules at a global level
+include $(BUILD_SYSTEM)/disabled_modules.mk
+
 # broken:
 #	$(foreach file,$^,$(if $(findstring,.a,$(suffix $file)),-l$(file),$(file)))
 

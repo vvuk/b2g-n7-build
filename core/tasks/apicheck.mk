@@ -39,8 +39,7 @@ $(TARGET_OUT_COMMON_INTERMEDIATES)/PACKAGING/$(strip $(1))-timestamp: $(2) $(3) 
 checkapi: $(TARGET_OUT_COMMON_INTERMEDIATES)/PACKAGING/$(strip $(1))-timestamp
 endef
 
-# Run the checkapi rules by default.
-droidcore: checkapi
+droidcore:
 
 last_released_sdk_version := $(lastword $(call numerically_sort, \
             $(filter-out $(SRC_API_DIR)/current, \
